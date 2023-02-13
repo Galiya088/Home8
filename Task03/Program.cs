@@ -39,15 +39,12 @@ void PrintArray(int[,] array)
     }
 }
 
-///<summary>Произведение матриц</summary>
 int[,] ConArray(int[,] arrayA, int[,] arrayB)
 {
     int rowsA = arrayA.GetLength(0);
     int colsA = arrayA.GetLength(1);
     int rowsB = arrayB.GetLength(0);
     int colsB = arrayB.GetLength(1);
-
-    // if (colsA != rowsB) return null;
 
     int[,] result = new int[rowsA, colsB];
 
@@ -62,7 +59,6 @@ int[,] ConArray(int[,] arrayA, int[,] arrayB)
     return result;
 }
 
-
 int sizeMA = GetNum("Введите размер M1: ");
 int sizeNA = GetNum("Введите размер N1: ");
 int sizeMB = GetNum("Введите размер M2: ");
@@ -71,16 +67,11 @@ int sizeNB = GetNum("Введите размер N2: ");
 int[,] arrayA = GetArray(sizeMA, sizeNA, 0, 9);
 int[,] arrayB = GetArray(sizeMB, sizeNB, 0, 9);
 
-// int[,] arrayA = new int[,]{ {2, 4}, {3, 2}};
-// int[,] arrayB = new int[,]{ {3, 4}, {3, 3}};
-
 PrintArray(arrayA);
 Console.WriteLine();
 PrintArray(arrayB);
 int[,] arrayCon = ConArray(arrayA, arrayB);
 Console.WriteLine();
-
-// if (arrayCon == null) Console.WriteLine("Количество столбцов матрицы A не равно количеству строк матрицы B");
- PrintArray(arrayCon);
+PrintArray(arrayCon);
 
 
